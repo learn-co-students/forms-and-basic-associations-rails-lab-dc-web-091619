@@ -5,7 +5,7 @@
 1.  Practice building associations
 2.  Practice building forms in erb
 
-## A song library
+## A song library 
 
 In this lab, we're going to make a song library. Our data model looks like this:
 
