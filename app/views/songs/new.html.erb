@@ -3,8 +3,19 @@
 <%= form_for @song  do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  <br />
 
+  <label>Song Artist </label>
+  <%= f.text_field :artist_name %>
+
+  <label>Song Genre</label> <!--collections dropdown select --->
+  <%= f.collection_select :genre_name, Genre.all, :name, :name %>
+  <!-- <%# object we're making (implied), field to fill in, collection to include,
+        value (id), text to display %> -->
+
+  <label>Song Notes</label>
+  <input type="text" name="song[note_contents][]" id="song_notes_1">
+  <input type="text" name="song[note_contents][]" id="song_notes_2">
+  <input type="text" name="song[note_contents][]" id="song_notes_3">
   <%= f.submit %>
 <% end %>
 
